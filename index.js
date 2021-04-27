@@ -1,13 +1,24 @@
 function calculateDays() {
-    
     let currentTime = Date.now();
-    let dob = "1982/02/17";
-    let timeDiff = currentTime - new Date(dob);
-    const dateDisplayer = document.getElementById("daysOld");
+    let dob = document.getElementById('dob').value;
+    const parsedDob = parseInt(dob, 10);
 
-    const daysOld = Math.round(timeDiff/1000/60/60/24)
+    if (isNaN(parsedDob)) {
+        console.log("no date")
+        const dateDisplayer = document.getElementById("daysOld");
+        dateDisplayer.innerText = "Please enter a date";
 
-    dateDisplayer.innerHTML = `You are officially ${daysOld} days old!`;
+    } else  {
+        let timeDiff = currentTime - new Date(dob);
+        const dateDisplayer = document.getElementById("daysOld");
+         
+        const daysOld = Math.round(timeDiff/1000/60/60/24)
+        
+        dateDisplayer.innerHTML = `You are officially ${daysOld} days old!`;
+    
+    }
+
+
 }
 
-calculateDays()
+// calculateDays()  
