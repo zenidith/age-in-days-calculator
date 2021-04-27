@@ -1,9 +1,13 @@
-var currentTime = Date.now();
+function calculateDays() {
+    
+    let currentTime = Date.now();
+    let dob = "1982/02/17";
+    let timeDiff = currentTime - new Date(dob);
+    const dateDisplayer = document.getElementById("daysOld");
 
-let dob = "1982/02/17";
+    const daysOld = Math.round(timeDiff/1000/60/60/24)
 
-let timeDifference = currentTime - new Date(dob);
+    dateDisplayer.innerHTML = `You are officially ${daysOld} days old!`;
+}
 
-console.log(new Date(dob));
-console.log(currentTime);
-console.log(timeDifference);
+calculateDays()
