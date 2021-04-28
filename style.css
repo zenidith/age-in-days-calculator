@@ -3,10 +3,11 @@
     flex-direction: column;
     max-width: 90%;
     margin: 0 auto;
-    justify-content: center
+    justify-content: center;
     align-items: center;
     height: 100vh;    
-    background-color: yellow;
+    background-image: url('flowers.jpeg');
+    /* background-repeat: no-repeat; */
 }
 
 h1 {
