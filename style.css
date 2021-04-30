@@ -16,14 +16,19 @@ body {
     height: 100vh;    
     padding: 1em;
 }
-
-h1 {
-    margin: 0;
-}
+/* 
+I need to change my fonts to different sizes etc */
 
 button {
-    border: none;
-    padding: : 1em 2em;
-    border-radius: 5px;
+    padding: 20px 50px;
+    font-size: 24px;
+    text-align: center;
     cursor: pointer;
+    outline: none;
+    color: rgb(239, 231, 231);
+    background-color: #0c64fc;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  
 }
